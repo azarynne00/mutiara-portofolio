@@ -1,0 +1,1332 @@
+:root {
+    --sage-dark: #818263;
+    --sage-soft: #C2C395;
+    --pink: #DDBAAE;
+    --peach: #EFD7CF;
+    --oat: #DCD4C1;
+    --honey: #F6EAD4;
+    --cream: #FFFAF2;
+
+    --brown: #81746A;
+    --dark: #59594F;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf2,
+            #f5eee4
+        );
+
+    color: var(--dark);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+        FALLING FLOWERS
+========================================= */
+
+.petal-container {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+
+.petal {
+    position: absolute;
+
+    top: -30px;
+
+    color: var(--pink);
+
+    opacity: 0.65;
+
+    animation:
+        fall linear forwards;
+}
+
+
+@keyframes fall {
+
+    from {
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+        MAIN
+========================================= */
+
+.dream-page {
+    width:
+        min(
+            1100px,
+            calc(100% - 40px)
+        );
+
+    margin: auto;
+
+    padding:
+        75px 0
+        40px;
+}
+
+
+/* =========================================
+        HEADER
+========================================= */
+
+.dream-header {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin:
+        0 auto
+        90px;
+}
+
+
+.small-title {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color:
+        var(--sage-dark);
+
+    margin-bottom: 18px;
+}
+
+
+.dream-header h1 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            58px,
+            9vw,
+            100px
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.dream-header h1 em {
+    color:
+        var(--sage-dark);
+
+    font-style: italic;
+}
+
+
+.dream-header > p {
+    max-width: 550px;
+
+    margin:
+        25px auto
+        0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    color:
+        var(--brown);
+}
+
+
+.header-decoration {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    color:
+        var(--pink);
+}
+
+
+.header-decoration span {
+    width: 90px;
+
+    height: 1px;
+
+    background:
+        var(--oat);
+}
+
+
+/* =========================================
+        INTRO LETTER
+========================================= */
+
+.dream-intro {
+    max-width: 800px;
+
+    margin:
+        0 auto
+        110px;
+
+    padding:
+        50px 60px;
+
+    background:
+        var(--cream);
+
+    border:
+        1px solid
+        rgba(
+            129,
+            130,
+            99,
+            0.13
+        );
+
+    box-shadow:
+        0 20px 45px
+        rgba(
+            80,
+            70,
+            60,
+            0.07
+        );
+
+    transform:
+        rotate(-1deg);
+
+    position: relative;
+}
+
+
+.dream-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: -13px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    width: 110px;
+
+    height: 28px;
+
+    background:
+        rgba(
+            221,
+            186,
+            174,
+            0.55
+        );
+}
+
+
+.intro-label {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color:
+        var(--sage-dark);
+
+    margin-bottom: 18px;
+}
+
+
+.dream-intro h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+
+.dream-intro h2 em {
+    color:
+        var(--sage-dark);
+
+    font-style: italic;
+}
+
+
+.dream-intro p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.65;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        SECTION TITLE
+========================================= */
+
+.dream-section {
+    margin-bottom: 110px;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-title span {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color:
+        var(--sage-dark);
+
+    margin-bottom: 12px;
+}
+
+
+.section-title h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            40px,
+            6vw,
+            60px
+        );
+
+    font-weight: 500;
+}
+
+
+.section-title h2 em {
+    color:
+        var(--sage-dark);
+
+    font-style: italic;
+}
+
+
+/* =========================================
+        FUTURE OPTIONS
+========================================= */
+
+.future-options {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 30px;
+}
+
+
+.future-card {
+    position: relative;
+
+    min-height: 360px;
+
+    padding:
+        45px 40px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(
+            129,
+            130,
+            99,
+            0.12
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            80,
+            70,
+            60,
+            0.06
+        );
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.future-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 25px 45px
+        rgba(
+            80,
+            70,
+            60,
+            0.12
+        );
+}
+
+
+.future-card.japan {
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf2,
+            #f3e5df
+        );
+}
+
+
+.future-card.ugm {
+    background:
+        linear-gradient(
+            135deg,
+            #f2f1e5,
+            #fffaf2
+        );
+}
+
+
+.card-number {
+    position: absolute;
+
+    top: 15px;
+
+    right: 25px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 70px;
+
+    font-style: italic;
+
+    color:
+        rgba(
+            129,
+            130,
+            99,
+            0.13
+        );
+}
+
+
+.future-icon {
+    font-size: 32px;
+
+    margin-bottom: 18px;
+}
+
+
+.future-label {
+    display: inline-block;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--sage-dark);
+
+    margin-bottom: 12px;
+}
+
+
+.future-card h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+
+.future-card h3 em {
+    color:
+        var(--sage-dark);
+
+    font-style: italic;
+}
+
+
+.future-card p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.55;
+
+    color:
+        var(--brown);
+
+    max-width: 450px;
+}
+
+
+.future-tag {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding:
+        7px 12px;
+
+    background:
+        var(--honey);
+
+    color:
+        var(--sage-dark);
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+        DREAM CAREER
+========================================= */
+
+.career-card {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding:
+        60px;
+
+    background:
+        var(--sage-dark);
+
+    color:
+        var(--cream);
+
+    overflow: hidden;
+}
+
+
+.career-flower {
+    position: absolute;
+
+    right: 30px;
+
+    bottom: -25px;
+
+    font-size: 150px;
+
+    color:
+        rgba(
+            255,
+            250,
+            242,
+            0.08
+        );
+}
+
+
+.career-label {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color:
+        var(--honey);
+
+    margin-bottom: 18px;
+}
+
+
+.career-card h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            65px
+        );
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+
+.career-card h3 em {
+    color:
+        var(--peach);
+
+    font-style: italic;
+}
+
+
+.career-card p {
+    max-width: 680px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color:
+        #f8f2e8;
+}
+
+
+.career-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.career-tags span {
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            250,
+            242,
+            0.35
+        );
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+        PLACES
+========================================= */
+
+.places {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.place-card {
+    position: relative;
+
+    width: 245px;
+
+    min-height: 165px;
+
+    padding:
+        27px 25px;
+
+    background:
+        var(--cream);
+
+    border:
+        1px solid
+        rgba(
+            129,
+            130,
+            99,
+            0.12
+        );
+
+    box-shadow:
+        0 12px 25px
+        rgba(
+            80,
+            70,
+            60,
+            0.06
+        );
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.place-card:nth-child(odd) {
+    transform:
+        rotate(-2deg);
+}
+
+
+.place-card:nth-child(even) {
+    transform:
+        rotate(2deg);
+}
+
+
+.place-card:hover {
+    transform:
+        rotate(0deg)
+        translateY(-8px);
+}
+
+
+.place-card > span {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--pink);
+}
+
+
+.place-card > div {
+    font-size: 27px;
+
+    margin:
+        8px 0
+        3px;
+}
+
+
+.place-card h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+
+.place-card p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        LEARNING
+========================================= */
+
+.learning-list {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.learning-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding:
+        23px 28px;
+
+    background:
+        rgba(
+            255,
+            250,
+            242,
+            0.9
+        );
+
+    border-left:
+        5px solid
+        var(--sage-soft);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            80,
+            70,
+            60,
+            0.05
+        );
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.learning-item:hover {
+    transform:
+        translateX(8px);
+}
+
+
+.learning-number {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color:
+        var(--pink);
+
+    min-width: 35px;
+}
+
+
+.learning-item h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    margin-bottom: 4px;
+}
+
+
+.learning-item p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.45;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        PERSONAL GOALS
+========================================= */
+
+.goals-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3eadb,
+            #fffaf2
+        );
+}
+
+
+.goal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background:
+        rgba(
+            255,
+            250,
+            242,
+            0.8
+        );
+}
+
+
+.goal span {
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--sage-soft);
+
+    color:
+        var(--cream);
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.goal p {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        QUOTE
+========================================= */
+
+.final-quote {
+    max-width: 750px;
+
+    margin:
+        0 auto
+        100px;
+
+    text-align: center;
+}
+
+
+.final-quote > span {
+    display: block;
+
+    color:
+        var(--pink);
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+.final-quote h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            52px
+        );
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+.final-quote h2 em {
+    color:
+        var(--sage-dark);
+
+    font-style: italic;
+}
+
+
+.final-quote p {
+    margin-top: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        NAVIGATION
+========================================= */
+
+.page-navigation {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 35px;
+
+    border-top:
+        1px solid
+        rgba(
+            129,
+            130,
+            99,
+            0.18
+        );
+}
+
+
+.nav-button {
+    padding:
+        12px 20px;
+
+    border:
+        1px solid
+        var(--sage-dark);
+
+    color:
+        var(--sage-dark);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.nav-button:hover {
+    background:
+        var(--sage-dark);
+
+    color:
+        var(--cream);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.page-number {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        FOOTER
+========================================= */
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 45px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(
+            129,
+            130,
+            99,
+            0.10
+        );
+
+    font-size: 10px;
+
+    color:
+        var(--brown);
+}
+
+
+/* =========================================
+        RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .dream-page {
+        width:
+            calc(100% - 28px);
+
+        padding-top: 55px;
+    }
+
+
+    .dream-intro {
+        padding:
+            40px 30px;
+    }
+
+
+    .future-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .career-card {
+        padding:
+            45px 30px;
+    }
+
+
+    .goals-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .dream-page {
+        width:
+            calc(100% - 20px);
+
+        padding:
+            40px 0
+            25px;
+    }
+
+
+    .small-title {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .dream-header > p {
+        font-size: 19px;
+    }
+
+
+    .header-decoration span {
+        width: 55px;
+    }
+
+
+    .dream-intro {
+        padding:
+            35px 22px;
+    }
+
+
+    .dream-intro h2 {
+        font-size: 30px;
+    }
+
+
+    .dream-intro p {
+        font-size: 18px;
+    }
+
+
+    .future-card {
+        padding:
+            35px 25px;
+    }
+
+
+    .future-card h3 {
+        font-size: 30px;
+    }
+
+
+    .future-card p {
+        font-size: 18px;
+    }
+
+
+    .career-card {
+        padding:
+            35px 23px;
+    }
+
+
+    .career-card p {
+        font-size: 18px;
+    }
+
+
+    .place-card {
+        width: 100%;
+    }
+
+
+    .learning-item {
+        gap: 15px;
+
+        padding:
+            20px;
+    }
+
+
+    .learning-item h3 {
+        font-size: 21px;
+    }
+
+
+    .learning-item p {
+        font-size: 16px;
+    }
+
+
+    .goals-box {
+        padding:
+            20px 15px;
+    }
+
+
+    .goal p {
+        font-size: 17px;
+    }
+
+
+    .page-navigation {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .page-number {
+        width: 100%;
+
+        order: -1;
+
+        text-align: center;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+}
